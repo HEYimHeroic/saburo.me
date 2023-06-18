@@ -13,9 +13,9 @@
         <meta property="twitter:title" content="YOU JUST GOT SABURO'D">
         <meta property="twitter:image" content="https://saburo.me/Saburod-full.png">
     </head>
-    <body onload="myFunction()">
+    <body onload="saburorand()">
     <div style="text-align: center;">
-<script>
+<script>function saburorand(){
     var images = [
     { probability: .16, url: "SABURO'D.png"},
     { probability: .14, url: "you have not been Saburo'd.png"},
@@ -30,7 +30,7 @@
 images.sort(function (a, b) {
     return a.probability - b.probability;
 });
-
+}
 
 function getImageUrl(images) {
     var rand = Math.random();
