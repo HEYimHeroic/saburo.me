@@ -12,38 +12,44 @@
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="YOU JUST GOT SABURO'D">
         <meta property="twitter:image" content="https://saburo.me/Saburod-full.png">
+        
     </head>
-    <body onload="saburorand()">
+    <body>
     <div style="text-align: center;">
-<script>function saburorand(){
-    var images = [
-    { probability: .16, url: "SABURO'D.png"},
-    { probability: .14, url: "you have not been Saburo'd.png"},
-    { probability: .14, url: "SABURO'D ... or did you.png"},
-    { probability: .14, url: "SABURO (SWITCH)'D.png"},
-    { probability: .14, url: "SIR BURRO'D.png"},
-    { probability: .14, url: "SAB-UMII-RO'D.png"},
-    { probability: .14, url: "HIROSHI'D.png"}
-];
+  <img style="margin-top: 10%" id="saburoimg" height="100%" width=auto src="" title="site favicon by @tsundika on Twitter">
 
-// it has to be in increasing order of probabilities
-images.sort(function (a, b) {
-    return a.probability - b.probability;
-});
-}
+  <script>
+  function getsaburo() {
+    
+      var randomNum = Math.random() * 100; // Generate a random number
+      var saburoimg = document.querySelector('#saburoimg');
 
-function getImageUrl(images) {
-    var rand = Math.random();
-    var sum = 0;
-    for(var i=0; i < images.length; i++) {
-        sum += images[i].probability;
-        if(rand <= sum ) {
-            return images[i];
-        }
-    }
-}
-document.getElementById("saburo").src = getImageUrl;</script>
-<img style="margin-top: 10%" id="saburo" height="100%" width=auto src="" title="site favicon by @tsundika on Twitter">
+      if (randomNum < 94) {
+        // 94% chance
+        saburoimg.src = "SABURO'D.png";
+      } else if (randomNum < 95) {
+        // 1% chance
+        saburoimg.src = "you have not been Saburo'd.png";
+      } else if (randomNum < 96) {
+        // 1% chance
+        saburoimg.src = "SABURO'D ... or did you.png";
+      } else if (randomNum < 97) {
+        // 1% chance
+        saburoimg.src = "SABURO (SWITCH)'D.png";
+      } else if (randomNum < 98) {
+        // 1% chance
+        saburoimg.src = "SIR BURRO'D.png";
+      } else if (randomNum < 99) {
+        // 1% chance
+        saburoimg.src = "SAB-UMII-RO'D.png";
+      } else {
+        // 1% chance
+        saburoimg.src = "HIROSHI'D.png";
+      }
+  }
+  
+  window.addEventListener('DOMContentLoaded', getsaburo);
+  </script>
 
 </div>
     </body>
