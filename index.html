@@ -13,9 +13,10 @@
         <meta property="twitter:title" content="YOU JUST GOT SABURO'D">
         <meta property="twitter:image" content="https://saburo.me/Saburod-full.png">
     </head>
-    <body>
+    <body onload="myFunction()">
     <div style="text-align: center;">
-<script>var images = [
+<script>
+    var images = [
     { probability: .94, url: "SABURO'D.png"},
     { probability: .01, url: "you have not been Saburo'd.png"},
     { probability: .01, url: "SABURO'D ... or did you.png"},
@@ -30,6 +31,7 @@ images.sort(function (a, b) {
     return a.probability - b.probability;
 });
 
+
 function getImageUrl(images) {
     var rand = Math.random();
     var sum = 0;
@@ -39,8 +41,9 @@ function getImageUrl(images) {
             return images[i];
         }
     }
-}</script>
-<img style="margin-top: 10%" height="80%" width=auto src="SABURO'D.png" title="site favicon by @tsundika on Twitter">
+}
+document.getElementById("saburo").src = images;</script>
+<img style="margin-top: 10%" id="saburo" height="80%" width=auto src="SABURO'D.png" title="site favicon by @tsundika on Twitter">
 
 </div>
     </body>
