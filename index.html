@@ -4,7 +4,7 @@
     <head>
     <title>Saburo'd</title>
         <link rel="icon" href="Saburod.png">
-        <meta name="theme-color" content="#0a48b4">
+        <meta content="#0a48b4" name="theme-color">
         <meta property="og:image" content="Saburod-full.png">
         <meta property="og:image:alt" content="YOU JUST GOT SABURO'D">
         <meta property="og:description" content="YOU JUST GOT SABURO'D">
@@ -15,7 +15,31 @@
     </head>
     <body>
     <div style="text-align: center;">
+<script>var images = [
+    { probability: .94, url: "SABURO'D.png"},
+    { probability: .01, url: "you have not been Saburo'd.png"},
+    { probability: .01, url: "SABURO'D ... or did you.png"},
+    { probability: .01, url: "SABURO (SWITCH)'D.png"},
+    { probability: .01, url: "SIR BURRO'D.png"},
+    { probability: .01, url: "SAB-UMII-RO'D.png"},
+    { probability: .01, url: "HIROSHI'D.png"}
+];
 
+// it has to be in increasing order of probabilities
+images.sort(function (a, b) {
+    return a.probability - b.probability;
+});
+
+function getImageUrl(images) {
+    var rand = Math.random();
+    var sum = 0;
+    for(var i=0; i < images.length; i++) {
+        sum += images[i].probability;
+        if(rand <= sum ) {
+            return images[i];
+        }
+    }
+}</script>
 <img style="margin-top: 10%" height="80%" width=auto src="SABURO'D.png" title="site favicon by @tsundika on Twitter">
 
 </div>
