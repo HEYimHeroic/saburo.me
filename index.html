@@ -22,31 +22,28 @@
   function getsaburo() {
     
       var randomNum = Math.random() * 100; // Generate a random number
-      var randomNumS = Math.random() * 100; // Generate another random number
+      var randomNumS = Math.random() * 8; // Generate another random number
       var saburoimg = document.querySelector('#saburoimg');
 
       if (randomNum < 98) {
         // 98% chance
         saburoimg.src = "SABURO'D.png";
-      } else if (randomNumS < 93) {
-          // 2% chance
-          saburoimg.src = "SABURO'D.png";
-        } else if (randomNumS < 2) {
+      } else if (randomNumS < 1) {
           saburoimg.src = "you have not been Saburo'd.png";
-        } else if (randomNumS < 3) {
+        } else if (randomNumS < 2) {
           saburoimg.src = "SABURO'D ... or did you.png";
-        } else if (randomNumS < 4) {
+        } else if (randomNumS < 3) {
           saburoimg.src = "SABURO (SWITCH)'D.png";
-        } else if (randomNumS < 5) {
+        } else if (randomNumS < 4) {
           saburoimg.src = "SIR BURRO'D.png";
-        } else if (randomNumS < 6) {
+        } else if (randomNumS < 5) {
           saburoimg.src = "SAB-UMII-RO'D.png";
-        } else if (randomNumS < 7) {
+        } else if (randomNumS < 6) {
           saburoimg.src = "HIROSHI'D.png";
-        } else if (randomNumS < 8) {
+        } else if (randomNumS < 7) {
           saburoimg.src = "cake'd.png";
         } else {
-          saburoimg.src = "streetpass'd.png";
+          saburoimg.src = "streetpass'd.jpg";
       }
   }
   
