@@ -22,32 +22,31 @@
   function getsaburo() {
     
       var randomNum = Math.random() * 100; // Generate a random number
+      var randomNumS = Math.random() * 100; // Generate another random number
       var saburoimg = document.querySelector('#saburoimg');
 
-      if (randomNum < 93) {
-        // 93% chance
+      if (randomNum < 98) {
+        // 98% chance
         saburoimg.src = "SABURO'D.png";
-      } else if (randomNum < 94) {
-        // 1% chance
-        saburoimg.src = "you have not been Saburo'd.png";
-      } else if (randomNum < 95) {
-        // 1% chance
-        saburoimg.src = "SABURO'D ... or did you.png";
-      } else if (randomNum < 96) {
-        // 1% chance
-        saburoimg.src = "SABURO (SWITCH)'D.png";
-      } else if (randomNum < 97) {
-        // 1% chance
-        saburoimg.src = "SIR BURRO'D.png";
-      } else if (randomNum < 98) {
-        // 1% chance
-        saburoimg.src = "SAB-UMII-RO'D.png";
-      } else if (randomNum < 99) {
-        // 1% chance
-        saburoimg.src = "HIROSHI'D.png";
-      } else {
-        // 1% chance
-        saburoimg.src = "cake'd.png";
+      } else if (randomNumS < 93) {
+          // 2% chance
+          saburoimg.src = "SABURO'D.png";
+        } else if (randomNumS < 2) {
+          saburoimg.src = "you have not been Saburo'd.png";
+        } else if (randomNumS < 3) {
+          saburoimg.src = "SABURO'D ... or did you.png";
+        } else if (randomNumS < 4) {
+          saburoimg.src = "SABURO (SWITCH)'D.png";
+        } else if (randomNumS < 5) {
+          saburoimg.src = "SIR BURRO'D.png";
+        } else if (randomNumS < 6) {
+          saburoimg.src = "SAB-UMII-RO'D.png";
+        } else if (randomNumS < 7) {
+          saburoimg.src = "HIROSHI'D.png";
+        } else if (randomNumS < 8) {
+          saburoimg.src = "cake'd.png";
+        } else {
+          saburoimg.src = "streetpass'd.png";
       }
   }
   
